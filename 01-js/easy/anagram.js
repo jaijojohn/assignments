@@ -5,11 +5,10 @@
 */
 
 function isAnagram(str1, str2) {
-  const sortedWord1 = sortStrChars(str1);
-  const sortedWord2 = sortStrChars(str2);
- /// console.log(sortedWord1);
- // console.log(sortedWord2);
-  if (sortedWord1 = sortedWord2)
+  let sortedWord1 = str1.replaceAll(" ", "").toLowerCase().split("").sort().join("");
+  let sortedWord2 =  str2.replaceAll(" ", "").toLowerCase().split("").sort().join("");
+ sortedWord1 === sortedWord2;
+  if (sortedWord1 == sortedWord2)
   {
     return true;
   }
