@@ -16,6 +16,53 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+  constructor(value)
+  {
+      this.result = value;
+  }
+ add(adds)
+{
+  this.result +=adds;
+  let res = this.result
+  return  res;
+}
+ subtract(sub)
+{
+  this.result -=sub;
+  return this.result;
+}
+multiply(mul)
+{
+  this.result *=mul;
+  return this.result;
+}
+divide(div)
+{
+  this.result /=div;
+  return this.result;
+}
+clear()
+{
+  this.result = 0;
+  return this.result;
+}
+getResult()
+{
+  return(this.result);
+}
+calculate(exp)
+{
+  let arr = exp.replace(/ /g, '');
+  try{
+    let res = eval(arr);
+    return(res);
+  }
+  catch{
+     throw new Error("Invalid expression");
+  }
+}
+}
+
 
 module.exports = Calculator;
